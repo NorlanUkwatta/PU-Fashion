@@ -1,0 +1,164 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for forms */
+.container {
+    background-color: white;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.form-control {
+    width: 80%;
+    padding: 12px;
+    margin: 8px auto 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+/* Input fields and buttons */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.checkbox{
+    margin-bottom: 20px;
+}
+
+.fp{
+    margin-bottom: 20px;
+}
+
+button {
+    width: 106%;
+    padding: 12px;
+    background-color: #fff;
+    color: black;
+    border: 1px solid #721c24;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #721c24;
+    color: #fff;
+}
+
+/* Checkbox styling */
+.remember-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+a:hover {
+    color: #721c24;
+    text-decoration: none;
+}
+
+/* Hide sections */
+.hidden {
+    display: none;
+}
+
+/* Progress Bar (Step Style) */
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 40px;
+    position: relative;
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 35px;
+    text-align: center;
+    z-index: 1;
+    /* rotate each step individually for incline effect */
+    transform-origin: center;
+}
+
+#step1 {
+    transform: rotate(-5deg);
+}
+
+#step2 {
+    transform: rotate(5deg);
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 10px;
+    position: relative;
+    top: 0; /* keep line horizontal */
+    z-index: 0;
+}
+
+.step.active {
+    background-color: #721c24;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
