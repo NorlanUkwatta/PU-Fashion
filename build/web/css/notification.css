@@ -1,0 +1,72 @@
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-notification {
+  position: relative; /* for close button positioning */
+  display: flex;
+  align-items: center;
+  padding: 16px 20px 16px 16px;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show animation */
+.custom-notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Icon */
+.notification-icon {
+  font-size: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* Message */
+.notification-message {
+  flex: 1;
+  word-wrap: break-word;
+}
+
+/* Close button */
+.notification-close {
+  position: relative;
+  align-items: end;
+  background: transparent;
+  border: none;
+  font-size: 16px;  /* Smaller font */
+  color: inherit;
+  cursor: pointer;
+  padding: 0px;
+  width: 10%;
+}
+
+/* Colors */
+.notification-success {
+  background-color: #28a745;
+}
+
+.notification-error {
+  background-color: #dc3545;
+}
+
+.notification-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
