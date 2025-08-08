@@ -11,6 +11,10 @@
         <mapping class="hibernate.User"/>
         <mapping class="hibernate.UserType"/>
         <mapping class="hibernate.Status"/>
+        <mapping class="hibernate.Category"/>
+        <mapping class="hibernate.Color"/>
+        <mapping class="hibernate.Size"/>
+        <mapping class="hibernate.Product"/>
     </session-factory>
 </hibernate-configuration>
 

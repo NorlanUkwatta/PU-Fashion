@@ -18,7 +18,7 @@ public class Size implements Serializable {
     private Integer id;
 
     @Column(name = "name", length = 45, nullable = false)
-    private Integer name;
+    private String name;
 
     public Size() {
 
@@ -32,11 +32,11 @@ public class Size implements Serializable {
         this.id = id;
     }
 
-    public Integer getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
+    public void setName(String name) {
         this.name = name;
     }
 }

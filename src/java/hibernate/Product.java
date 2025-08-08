@@ -50,6 +50,10 @@ public class Product implements Serializable {
     @ManyToOne
     @JoinColumn(name = "size_id")
     private Size size;
+    
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Product() {
 
@@ -133,5 +137,13 @@ public class Product implements Serializable {
 
     public void setSize(Size size) {
         this.size = size;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
