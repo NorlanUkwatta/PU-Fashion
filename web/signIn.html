@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Sign In</title>
+        <title>PU Fashion | Sign In</title>
         <link rel="stylesheet" href="css/style1.css" />
+        <link rel="stylesheet" href="css/notification.css" />
     </head>
     <body>
         <div class="container">
@@ -15,13 +16,13 @@
 
                 <div class="form-group">
                     <label>Email or Mobile</label>
-                    <input type="text" placeholder="Email or Mobile">
+                    <input type="text" placeholder="Email" id="email">
                 </div>
 
                 <div class="form-group">
                     <label>Password</label>
                     <div class="password-wrapper">
-                        <input type="password" id="signup-password" placeholder="Create a password">
+                        <input type="password" id="password" placeholder="Create a password">
                         <span class="toggle-icon" onclick="togglePassword('signup-password', this)">️</span>
                     </div>
                 </div>
@@ -31,7 +32,7 @@
                     <label for="remember">Remember me</label>
                 </div>
 
-                <button class="button" onclick="">Sign In</button>
+                <button class="button" id="sign-in-button">Sign In</button>
 
                 <div class="link fp">
                     <a href="#" onclick="showForgot();">Forgot Password?</a>
@@ -54,25 +55,45 @@
 
                 <div class="form-group">
                     <label>Enter your email</label>
-                    <input type="email" placeholder="Enter your email" />
-                    <button class="btn" onclick="showVerification()">Send Code</button>
+                    <input type="email" placeholder="Enter your email" id="forgot-password-email"/>
+                    <button class="btn" id="forgot-password-verify-button">Send Code</button>
                 </div>
-
-                <!-- VERIFICATION STEP -->
-                <div id="verify-section" class="hidden">
-                    <div class="form-group">
-                        <label>Enter Verification Code</label>
-                        <input type="text" placeholder="Enter code" />
-                    </div>
-                    <button class="btn">Verify & Reset</button>
-                </div>
-
                 <div class="link">
                     <a href="#" onclick="backToSignin()">← Back to Sign In</a>
                 </div>
             </div>
+
+            <!-- FORGOT PASSWORD VERIFY SECTION -->
+            <div id="forgot-password-enter-section" class="form-container hidden">
+                <h2>Reset your Password</h2>
+                <div class="form-group">
+                    <label>Check your email and enter the verification Code</label>
+                    <input type="text" placeholder="Enter code" id="passwordverificationCode"/>
+                </div>
+                <div class="form-group">
+                    <label>New password</label>
+                    <input type="password" placeholder="Enter your new password" id="fnp"/>
+                    <label>Re-enter password</label>
+                    <input type="password" placeholder="Enter your new password again" id="frp"/>
+                    <button class="btn" id="forgot-password-btn">Confirm</button>
+                </div>
+            </div>
+
+            <!-- Verification SECTION -->
+            <div id="accountVerify-section" class="form-container hidden">
+
+                <div id="verify-section">
+                    <div class="form-group">
+                        <label>Check your email and enter the verification Code</label>
+                        <input type="text" placeholder="Enter code" id="verificationCode"/>
+                    </div>
+                    <button class="btn" id="accountVerification">Verify</button>
+                </div>
+            </div>
+
         </div>
 
         <script src="js/signin.js"></script>
+        <script src="js/notification.js"></script>
     </body>
 </html>

@@ -25,4 +25,3 @@ public class HibernateUtil {
         getsessionFactory().close();
     }
 }
-

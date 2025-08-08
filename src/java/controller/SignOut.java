@@ -18,6 +18,7 @@ public class SignOut extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         JsonObject responseObject = new JsonObject();
         responseObject.addProperty("status", false);
+        
         HttpSession ses = request.getSession(false); //getting exsisting session
         if (ses != null) {
             ses.invalidate();

@@ -7,7 +7,6 @@ import hibernate.Status;
 import hibernate.User;
 import hibernate.UserType;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

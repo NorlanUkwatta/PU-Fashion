@@ -6,18 +6,22 @@ async function signOut() {
         if (json.status) {
 
             sessionStorage.removeItem("firstName");
-            sessionStorage.clear();
 
             document.getElementById("sign-in-id").classList.remove("d-none");
             document.getElementById("name-id-li").classList.add("d-none");
             document.getElementById("name-id").textContent = "";
 
-            window.location = "signIn.html";
+            showNotification("success", "Successfuly signed out");
+
+            setTimeout(function () {
+                window.location = "signIn.html";
+            }, 2000);
         } else {
+            showNotification("error", "Sign out failed");
             window.location.reload();
         }
     } else {
-        console.log("log out failed!");
+        showNotification("success", "Sign out failed");
     }
 }
 ;
